@@ -46,6 +46,6 @@ body{
 .show-text{
 	font-size: 13px;
 }
-.create-book, .update-book{
+.book_create, .book_update{
 	display: block;
 }

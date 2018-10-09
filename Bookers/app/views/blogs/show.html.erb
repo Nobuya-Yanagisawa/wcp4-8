@@ -7,6 +7,6 @@
 <p><strong>Title:</strong><%= @blog.title %>
 <p><strong>Body:</strong><%= @blog.body %></p>
 
-<%= link_to 'Edit', edit_blog_path %>
+<%= link_to 'Edit', edit_blog_path, class:"edit_#{@blog.id}" %>
 |
-<%= link_to 'Back', blogs_path %>
+<%= link_to 'Back', blogs_path, class:"back" %>
