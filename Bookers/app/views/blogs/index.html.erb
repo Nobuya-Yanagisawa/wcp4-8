@@ -16,9 +16,9 @@
   <tr>
   	<td><%= blog.title %></td>
 	<td><%= blog.body %></td>
-	<td><%= link_to 'Show', blog_path(blog.id) %></td>
-	<td><%= link_to 'Edit', edit_blog_path(blog.id) %></td>
-	<td><%= link_to 'Delete', blog_path(blog.id), method: :delete, "data-confirm" => "Are you sure?" %></td>
+	<td><%= link_to 'Show', blog_path(blog.id), class:"show_#{blog.id}" %></td>
+	<td><%= link_to 'Edit', edit_blog_path(blog.id), class:"edit_#{blog.id}" %></td>
+	<td><%= link_to 'Delete', blog_path(blog.id), method: :delete, "data-confirm" => "Are you sure?", class:"destroy_#{blog.id}" %></td>
   </tr>
   <% end %>
 </table>
@@ -34,7 +34,7 @@
 	<h4 class="new-head">Body</h4>
 	<%= f.text_area :body, class:"book_body" %>
 
-	<%= f.submit 'Create Book', class:"create-book" %>
+	<%= f.submit 'Create Book', class:"book_create" %>
 
 <% end %>
 
